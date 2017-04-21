@@ -1,0 +1,63 @@
+﻿<#@ template language="C#" inherits="Quic.Templates.Trade" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>,<#= dtContractStart 
+#>,<#= dtContractEnd 
+#>,<#= dtDelivery
+#>,<#= strPositionType 
+#>,<#= rAccruedPayoff
+#><# if (!barrierOption)
+	{
+#>,<#= strPastExercise 
+#><#  }
+#>,<#= rReceiveAmount 
+#>,<#= pYieldInfoReceive 
+#>,<#= pFXInfoReceive
+#>,<#= rPayAmount
+#>,<#= pYieldInfoPay 
+#>,<#= pFXInfoPay
+#>,<#= pYieldInfoSettle
+#>,<#= pFXInfoSettle
+#><#  BarrierDetails();
+#>,<#= pImpliedVol 
+#><# if (!barrierOption)
+	{
+#>,<#= rSmileVolOverride 
+#><#  }
+#>,<#= strBusDayConv 
+#>,"<#= putCurrency #>,<#= callCurrency #>,<#= settleCurrency 
+#>"<# if (doubleBarrier)
+	{
+#>,FXDoubleBarrierAnalyticSolverPrefs
+<# } #>
+<#+
+	protected virtual void BarrierDetails() 
+	{
+		if (barrierOption)
+		{
+			if (!doubleBarrier)
+			{
+#>,<#=  rBarrier
+#>,<#= strBarrierType
+#>,<#= strBarrierCondition
+#>,<#= rRebate
+#><#+
+			}
+			else {
+#>,<#=  rLBarrier
+#>,<#= rUBarrier
+#>,<#= strBarrierType
+#>,<#= rRebateLower
+#>,<#= rRebateUpper
+#><#+
+			}
+#>,<#= strRebatePaymentType
+#>,<#= strSamplingFrequency
+#>,<#= nViolation
+#>,<#= dtBarrierBreach
+#><#+ 
+		}
+	}
+#>

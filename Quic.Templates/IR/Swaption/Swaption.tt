@@ -1,0 +1,6 @@
+﻿<#@ template language="C#" inherits="Quic.Templates.Trade" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>,<#= strLeg1Name #>,<#= strLeg2Name #>,<#= strSolverPrefs #>,<#= strExerciseMap #>

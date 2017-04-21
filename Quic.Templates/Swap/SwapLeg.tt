@@ -1,0 +1,25 @@
+﻿<#@ template language="C#" inherits="Quic.Templates.Trade" #>
+<#@ import namespace="Quic.FPML" #>
+<#= strName #>, {
+<#
+	GetType();
+#>
+	strCurrency, S, <#= strCurrency #>
+	strNotionalExchange, S, <#= strNotionalExchange #>
+	arNotional, AR,  <#= arNotional #>
+	adtStart, AD,  <#= adtStart #>
+	adtEnd, AD,  <#= adtEnd #>
+	adtPayment, AD,  <#= adtPayment #>
+	strBusDayConv, S, <#= strBusDayConv #>
+	strDaycount, S, <#= strDaycount #>
+<# 
+  LegDetails(); 
+#>	
+	pYieldInfo, C, <#= strCurrency #>.Yield.<#= strCurrency #>
+	pFXInfo, C, <#= strCurrency #>.Exchange.USD
+	strName, S, <#= strName #>
+}
+<#+
+	protected virtual void GetType() {}
+	protected virtual void LegDetails() {}
+#>

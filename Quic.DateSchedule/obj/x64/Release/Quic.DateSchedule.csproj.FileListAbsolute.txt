@@ -1,0 +1,13 @@
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Config\Observables.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Config\PricingContext.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Config\Products.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.DateSchedule.dll.config
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.DateSchedule.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.DateSchedule.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.Config.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.Config.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\bin\Release\Quic.FPML.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\obj\x64\Release\Quic.DateSchedule.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\obj\x64\Release\Quic.DateSchedule.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.DateSchedule\obj\x64\Release\Quic.DateSchedule.pdb

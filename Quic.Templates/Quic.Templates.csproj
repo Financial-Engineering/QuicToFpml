@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{5BA7BC99-A762-4CDF-AF82-3B038DF3793B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quic.Templates</RootNamespace>
+    <AssemblyName>Quic.Templates</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IR\Swaption\BermudanExerciseMap.cs">
+      <DependentUpon>BermudanExerciseMap.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swaption\BermudanExerciseMap1.cs" />
+    <Compile Include="StaticConfig.cs" />
+    <Compile Include="FX\FxOption.cs">
+      <DependentUpon>FxOption.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FX\FxSingleLeg.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FxSingleLeg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FX\FxOption1.cs" />
+    <Compile Include="FX\FxSingleLeg1.cs" />
+    <Compile Include="IR\Swaption\EuropeanExerciseMap.cs">
+      <DependentUpon>EuropeanExerciseMap.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swaption\EuropeanExerciseMap1.cs" />
+    <Compile Include="IR\Swaption\Swaption.cs">
+      <DependentUpon>Swaption.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swaption\Swaption1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IR\Swap\BulletPayment.cs">
+      <DependentUpon>BulletPayment.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swap\BulletPayment1.cs" />
+    <Compile Include="IR\Swap\SwapLeg.cs">
+      <DependentUpon>SwapLeg.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swap\Swap1.cs" />
+    <Compile Include="IR\Swap\Swap.cs">
+      <DependentUpon>Swap.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swap\SwapLeg1.cs" />
+    <Compile Include="IR\Swap\SwapLegFixed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SwapLegFixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IR\Swap\SwapLegFixed1.cs" />
+    <Compile Include="IR\Swap\SwapLegFloat.cs">
+      <DependentUpon>SwapLegFloat.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IR\Swap\SwapLegFloat1.cs" />
+    <Compile Include="Trade\TradeMap.cs">
+      <DependentUpon>TradeMap.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Trade\Trade.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Trade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trade\Trade1.cs" />
+    <Compile Include="Trade\TradeMap1.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FX\FxOption.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>FxOption.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swaption\BermudanExerciseMap.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>BermudanExerciseMap.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swaption\EuropeanExerciseMap.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>EuropeanExerciseMap.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swaption\Swaption.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>Swaption.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swap\BulletPayment.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>BulletPayment.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swap\SwapLeg.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>SwapLeg.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="FX\FxSingleLeg.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>FxSingleLeg.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swap\Swap.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>Swap.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swap\SwapLegFixed.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>SwapLegFixed.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="IR\Swap\SwapLegFloat.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>SwapLegFloat.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="Trade\TradeMap.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TradeMap.cs</LastGenOutput>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+    <None Include="Trade\Trade.tt">
+      <LastGenOutput>Trade.cs</LastGenOutput>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <CustomToolNamespace>Quic.Templates</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quic.DateSchedule\Quic.DateSchedule.csproj">
+      <Project>{7fb4c4d9-a016-449e-a83b-5ab91efd1916}</Project>
+      <Name>Quic.DateSchedule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quic.FPML\Quic.FPML.csproj">
+      <Project>{977854f4-153a-4522-86f5-f127dbfec23d}</Project>
+      <Name>Quic.FPML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quic.Config\Quic.Config.csproj">
+      <Project>{ac7e038a-5d74-4d59-bf55-714dc11e7029}</Project>
+      <Name>Quic.Config</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

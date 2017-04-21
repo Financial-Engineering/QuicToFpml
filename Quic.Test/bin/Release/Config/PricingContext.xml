@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PricingContext>
+	<Path>\\melwbsygc2s\QuIC\working-dir\Service</Path>
+	<Aggregation>AggregationWhatIf.csv</Aggregation>
+	<CptyHierarchy>counterpartyHierarchy.csv</CptyHierarchy>
+	<CsvResults>Results_CVA.csv</CsvResults>
+	<ExportParams>ExportParams_CVA _WhatIf.csv</ExportParams>
+	<H5Results>Results_CVA.h5</H5Results>
+	<HolidaysCsv>holiday.csv</HolidaysCsv>
+	<HolidaysH5>Holidays.h5</HolidaysH5>
+	<LegalDocument>legalDocuments.csv</LegalDocument>
+	<MarketDataCsv>marketData.csv</MarketDataCsv>
+	<MarketDataH5>marketData.h5</MarketDataH5>
+	<ModelParamSet>FX_IF_IR_HW_1F</ModelParamSet>
+	<ModuleBindings>ModuleBindings.csv</ModuleBindings>
+	<MtmCsvResults>Results_MTM.csv</MtmCsvResults>
+	<MtmExportParams>ExportParams_MTM.csv</MtmExportParams>
+	<MtmH5Results>Results_MTM.h5</MtmH5Results>
+	<MtmPlugin>RiskMeasuresMtm.csv</MtmPlugin>
+	<Observables>observables.csv</Observables>
+	<Portfolio>portfolio.csv</Portfolio>
+	<RiskFactorParamH5>RiskFactorParameters.h5</RiskFactorParamH5>
+	<RiskMeasurePlugin>RiskMeasuresCVA.csv</RiskMeasurePlugin>
+	<Schedules>schedules.csv</Schedules>
+	<SimParams>SimulationParameters_CVA_Dates.csv</SimParams>
+	<SiteInfo>SiteInformation.csv</SiteInfo>
+	<StructureNodePlugin>RiskMeasuresDeal.csv</StructureNodePlugin>
+</PricingContext>

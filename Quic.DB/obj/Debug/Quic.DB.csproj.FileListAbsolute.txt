@@ -1,0 +1,5 @@
+D:\QuIC\etl\code\Quic.WebService\Quic.DB\bin\Debug\Quic.DB.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.DB\bin\Debug\Quic.DB.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.DB\obj\Debug\Quic.DB.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\Quic.DB\obj\Debug\Quic.DB.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.DB\obj\Debug\Quic.DB.pdb

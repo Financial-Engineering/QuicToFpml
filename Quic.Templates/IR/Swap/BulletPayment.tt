@@ -1,0 +1,24 @@
+﻿<#@ template language="C#" inherits="Quic.Templates.TradeMap" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>
+<#+
+protected override void GetMapType()
+{
+#>
+	strType, S, Bullet
+<#+
+}
+protected override void MapDetails()
+{
+#>
+	strCurrency, S, <#= strCurrency #>
+	adtPayment, AD,  <#= adtPayment #>
+	arAmount, AR, <#= arAmount #>
+	pYieldInfo, C, <#= strCurrency #>.Yield.<#= strCurrency #>
+	pFXInfo, C, <#= strCurrency #>.Exchange.USD
+<#+
+}
+#>

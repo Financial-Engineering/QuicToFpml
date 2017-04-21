@@ -1,0 +1,22 @@
+﻿<#@ template language="C#" inherits="Quic.Templates.TradeMap" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>
+<#+
+protected override void GetMapType()
+{
+#>
+	strType, S, PhysicalSwaption
+<#+
+}
+protected override void MapDetails() 
+{
+#>
+	adtExercise, AD, <#= adtExercise #>
+	adtSwapStart, AD, <#= adtSwapStart #>
+	strLongShort, S, <#= strLongShort #>
+<#+
+}
+#>

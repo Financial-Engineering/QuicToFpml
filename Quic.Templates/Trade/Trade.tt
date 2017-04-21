@@ -1,0 +1,29 @@
+<#@ template language="C#" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="Quic.FPML" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#= trade.id #>,<#= strProduct
+#>,<#= Parties[1].Item2
+#>,<#= trade.documentation.creditSupportAgreement.identifier.Value 
+#>,<#= trade.id 
+#>,<#= Parties[0].Item2
+#>,<#= typeMap[trade.Item.GetType().Name]
+#>,<#= Parties[0].Item2
+#>,USD,<#= Utilities.ToQuicDateFormat(trade.tradeHeader.tradeDate.Value) #>,,TRUE,TRUE<#+ 
+
+public static Dictionary<string,string> typeMap = new Dictionary<string,string>{
+	{"FxSingleLeg","FXForward"},
+	{"FXOptionVanillaEuropean","FX Opt"},
+	{"FxOption","FX Opt"},
+	{"FXSinglePartialBarrierAnalytic","FX S Barrier"},
+	{"Swap","IR Swap"},
+	{"Swaption","IR Swaption"}
+};
+
+public static Dictionary<string,string>  productMap = new Dictionary<string,string>{
+	{"FxSingleLeg","FXForward"},
+	{"Swap","IRGenericQMA"},
+	{"Swaption","IRGenericQMA"},
+	{"FxOption","FXOptionVanillaEuropean"}
+};
+#>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+                  xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Quic.Dispatch.WebService"
+                  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+                  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Quic.Dispatch.WebService"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Quic.Dispatch.WebService/Imports">
+      <xsd:import namespace="Quic.Dispatch.WebService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuicDispatchInterface_Submit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Submit" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_Submit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_SubmitEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitEx" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_SubmitEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_GetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_GetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_GetResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResults" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_GetResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_GetError_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetError" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_GetError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_Cancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cancel" />
+  </wsdl:message>
+  <wsdl:message name="IQuicDispatchInterface_Cancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuicDispatchInterface">
+    <wsdl:operation name="Submit">
+      <wsdl:input wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/Submit"
+                  message="tns:IQuicDispatchInterface_Submit_InputMessage" />
+      <wsdl:output wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/SubmitResponse"
+                   message="tns:IQuicDispatchInterface_Submit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitEx">
+      <wsdl:input wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/SubmitEx"
+                  message="tns:IQuicDispatchInterface_SubmitEx_InputMessage" />
+      <wsdl:output wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/SubmitExResponse"
+                   message="tns:IQuicDispatchInterface_SubmitEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <wsdl:input wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/GetStatus"
+                  message="tns:IQuicDispatchInterface_GetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/GetStatusResponse"
+                   message="tns:IQuicDispatchInterface_GetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResults">
+      <wsdl:input wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/GetResults"
+                  message="tns:IQuicDispatchInterface_GetResults_InputMessage" />
+      <wsdl:output wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/GetResultsResponse"
+                   message="tns:IQuicDispatchInterface_GetResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetError">
+      <wsdl:input wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/GetError"
+                  message="tns:IQuicDispatchInterface_GetError_InputMessage" />
+      <wsdl:output wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/GetErrorResponse"
+                   message="tns:IQuicDispatchInterface_GetError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cancel">
+      <wsdl:input wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/Cancel"
+                  message="tns:IQuicDispatchInterface_Cancel_InputMessage" />
+      <wsdl:output wsaw:Action="Quic.Dispatch.WebService/IQuicDispatchInterface/CancelResponse"
+                   message="tns:IQuicDispatchInterface_Cancel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<requestValuationReport xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-3" xsi:schemaLocation="http://www.fpml.org/FpML-5/reporting ../fpml-main-5-3.xsd http://www.w3.org/2000/09/xmldsig# ../xmldsig-core-schema.xsd">
+  <header>
+    <messageId messageIdScheme="http://www.abcdef.org/message-id">VAL001</messageId>
+    <sentBy>ABCDEF</sentBy>
+    <sendTo>BBBBBB</sendTo>
+    <creationTimestamp>2004-06-14T12:40:12Z</creationTimestamp>
+  </header>
+
+  <isCorrection>false</isCorrection>
+  <correlationId correlationIdScheme="http://www.example.com/correlationId">CORR/2004/06/14/001</correlationId>
+  <sequenceNumber>1</sequenceNumber>
+  <party id="party1">
+    <partyId>NAB LIMITED</partyId>
+  </party>
+  <party id="party2">
+    <partyId>TELSTRA CORP LTD</partyId>
+  </party>
+  <tradeValuationItem>
+  <trade id="XFF4509761082KAPI">
+    <tradeHeader>
+      <partyTradeIdentifier>
+        <partyReference href="party1" />
+        <tradeId tradeIdScheme="http://www.abn-amro.com/fx/trade-id">SwapPricer1</tradeId>
+      </partyTradeIdentifier>
+      <partyTradeIdentifier>
+        <partyReference href="party2" />
+        <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">SwapPricer1</tradeId>
+      </partyTradeIdentifier>
+      <tradeDate>2001-11-19</tradeDate>
+    </tradeHeader>
+    <product xsi:type="FxSingleLeg">
+      <exchangedCurrency1>
+        <payerPartyReference href="party2" />
+        <receiverPartyReference href="party1" />
+        <paymentAmount>
+          <currency>EUR</currency>
+          <amount>10000000</amount>
+        </paymentAmount>
+      </exchangedCurrency1>
+      <exchangedCurrency2>
+        <payerPartyReference href="party1" />
+        <receiverPartyReference href="party2" />
+        <paymentAmount>
+          <currency>USD</currency>
+          <amount>9175000</amount>
+        </paymentAmount>
+      </exchangedCurrency2>
+      <valueDate>2001-12-21</valueDate>
+      <exchangeRate>
+        <quotedCurrencyPair>
+          <currency1>EUR</currency1>
+          <currency2>USD</currency2>
+          <quoteBasis>Currency2PerCurrency1</quoteBasis>
+        </quotedCurrencyPair>
+        <rate>0.9175</rate>
+        <spotRate>0.9130</spotRate>
+        <forwardPoints>0.0045</forwardPoints>
+      </exchangeRate>
+    </product>
+    <documentation>
+      <masterAgreement>
+        <masterAgreementType>ISDA</masterAgreementType>
+        <masterAgreementDate>2012-01-01</masterAgreementDate>
+        <!--Not sure how to actually specify a specific netting set here....-->
+      </masterAgreement>
+      <creditSupportAgreement>
+        <type>ISDA1995CreditSupportAnnexEnglishLaw</type>
+        <date>2012-01-01</date>
+        <identifier>TELSTRA CORP LTD-CSA</identifier>
+      </creditSupportAgreement>
+    </documentation>
+  </trade>
+
+<!--Trade Valuation Set-->
+    <valuationSet>
+<!--Valuation Scenario-->
+      <valuationScenario id="valscen1">
+        <name>EOD Valuation</name>
+        <valuationDate>2004-05-01</valuationDate>
+      </valuationScenario>
+      <baseParty href="party1" />
+<!--Requested Valuation Characteristics-->
+      <quotationCharacteristics>
+        <measureType>Price</measureType>
+      </quotationCharacteristics>
+    </valuationSet>
+<!--Portfolio Valuation Set-->
+  </tradeValuationItem>
+</requestValuationReport>
+

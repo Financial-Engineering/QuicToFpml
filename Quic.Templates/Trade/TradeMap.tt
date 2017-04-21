@@ -1,0 +1,12 @@
+<#@ template language="C#" #>
+<#@ import namespace="Quic.FPML" #>
+<#= strName #>, {
+<#
+	GetMapType();
+    MapDetails(); 
+#>	strName, S, <#= strName #>
+}
+<#+
+	protected virtual void GetMapType() {}
+	protected virtual void MapDetails() {}
+#>

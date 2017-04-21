@@ -1,0 +1,14 @@
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Config\Observables.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Config\PricingContext.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Config\Products.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.CSV.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.CSV.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.Config.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.DateSchedule.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.DateSchedule.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.Config.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\bin\Release\Quic.FPML.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\obj\x64\Release\Quic.CSV.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\obj\x64\Release\Quic.CSV.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.CSV\obj\x64\Release\Quic.CSV.pdb

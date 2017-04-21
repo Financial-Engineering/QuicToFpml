@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{977854F4-153A-4522-86F5-F127DBFEC23D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quic.FPML</RootNamespace>
+    <AssemblyName>Quic.FPML</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="reporting\changes.pdf" />
+    <None Include="reporting\example-extension-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-asset-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-bond-option-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-business-events-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-cd-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-collateral-processes-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-com-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-correlation-swaps-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-credit-event-notification-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-dividend-swaps-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-doc-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-enum-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-eq-shared-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-eqd-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-fx-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-generic-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-ird-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-main-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-mktenv-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-msg-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-option-shared-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-reconciliation-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-reporting-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-return-swaps-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-riskdef-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-shared-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-standard-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-valuation-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-valuation-reporting-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\fpml-variance-swaps-5-3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reporting\FpML.spp" />
+    <None Include="reporting\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="reporting\cash-flow-matching\msg-ex28-cashflow-assertion-most-simple.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex29-cashflow-assertion-assetSwap.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex30-cashflow-assertion-ird.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex31-cashflow-match-result-ird-01.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex32-cashflow-match-result-ird-02.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex33-cashflow-match-result-ird-03.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex34-cashflow-assertion-cds-Termination.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex35-cashflow-assertion-cds-Coupon.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex36-cashflow-assertion-cds2.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex37-cashflow-match-result-cds2-01.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex38-cashflow-match-result-cds2-02.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex39-cashflow-match-result-cds2-03.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex40-cashflow-assertion-eqs-InterestReset.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex41-cashflow-assertion-eqs-InterestEquityReset.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex42-cashflow-assertion-eqs-InterestEquityDividendReset.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex43-cashflow-assertion-eqs-PartialTermination.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex44-cashflow-match-result-eqs-PartialTermination-01.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex45-cashflow-match-result-eqs-PartialTermination-02.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex46-cashflow-match-result-eqs-PartialTermination-03.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex47-cashflow-assertion-CompoundingSwap.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex48-cashflow-assertion-XCcy-PrincipalExchange.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex49-cashflow-assertion-EquityOption.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex50-cashflow-assertion-multiple-trades-cds.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex51-cashflow-assertion-multiple-trades-equity-option.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex52-cashflow-assertion-multiple-trades-multi-currency-cds.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex53-cashflow-cancel-multiple-trades-cds.xml" />
+    <Content Include="reporting\cash-flow-matching\msg-ex54-cashflow-match-result-multiple-trades-cds.xml" />
+    <Content Include="reporting\collateral\col-ex01-MC1-request-margin-deliver.xml" />
+    <Content Include="reporting\collateral\col-ex02-MC1-request-margin-IM-VM-split.xml" />
+    <Content Include="reporting\collateral\col-ex03-MC1-request-margin-net-IM-antic-demand-2m-threshold.xml" />
+    <Content Include="reporting\collateral\col-ex04-MC1-request-margin-netting-agreement.xml" />
+    <Content Include="reporting\collateral\col-ex05-MC1-request-margin-standard.xml" />
+    <Content Include="reporting\collateral\col-ex06-MC1-request-margin-template.xml" />
+    <Content Include="reporting\collateral\col-ex07-MC2-rescind-issued-call.xml" />
+    <Content Include="reporting\collateral\col-ex08-MC3b-margin-call-response.xml" />
+    <Content Include="reporting\collateral\col-ex09-MC3b-margin-call-response-deliver-fully-agree.xml" />
+    <Content Include="reporting\collateral\col-ex10-MC3b-margin-call-response-deliver-fully-agree-isda.xml" />
+    <Content Include="reporting\collateral\col-ex11-MC3c-propose-collateral.xml" />
+    <Content Include="reporting\collateral\col-ex12-MC4-rescind-margin-call-response.xml" />
+    <Content Include="reporting\collateral\col-ex13-MC5-margin-call-response-deliver-dispute.xml" />
+    <Content Include="reporting\collateral\col-ex14-MC5-margin-call-response-deliver-dispute-isda.xml" />
+    <Content Include="reporting\collateral\col-ex15-MC6-margin-call-response-deliver-partially-agree.xml" />
+    <Content Include="reporting\collateral\col-ex16-MC78-collateral-proposal-response.xml" />
+    <Content Include="reporting\collateral\col-ex17-MC11-acknowledge-dispute.xml" />
+    <Content Include="reporting\collateral\col-ex18-CS1-request-substitution.xml" />
+    <Content Include="reporting\collateral\col-ex19-CS25-substitution-response.xml" />
+    <Content Include="reporting\collateral\col-ex20-CS3-confirm-substitution.xml" />
+    <Content Include="reporting\collateral\col-ex21-CS4-confirm-collateral-return.xml" />
+    <Content Include="reporting\collateral\col-ex22-IN1-send-interest-notification.xml" />
+    <Content Include="reporting\collateral\col-ex23-IN1-send-interest-notification-matching-service.xml" />
+    <Content Include="reporting\collateral\col-ex24-IN1-send-interest-notification-with-interest-calculations.xml" />
+    <Content Include="reporting\collateral\col-ex25-IN1-send-interest-notification-both-directions-net.xml" />
+    <Content Include="reporting\collateral\col-ex26-IN1-send-interest-notification-both-directions-gross.xml" />
+    <Content Include="reporting\collateral\col-ex27-IN235-interest-response.xml" />
+    <Content Include="reporting\collateral\col-ex28-IN235-interest-response-matching-service.xml" />
+    <Content Include="reporting\collateral\col-ex29-IN-interest-calculation-statement.xml" />
+    <Content Include="reporting\credit-event-notice\msg-ex21-credit-event-notice.xml" />
+    <Content Include="reporting\entity-reporting\rpt-ex20-party-report.xml" />
+    <Content Include="reporting\entity-reporting\rpt-ex21-party-report-simple.xml" />
+    <Content Include="reporting\entity-reporting\rpt-ex22-party-report-multiple.xml" />
+    <Content Include="reporting\exposure\exp-ex101-phys-commod-large-trader-report-table1.xml" />
+    <Content Include="reporting\exposure\exp-ex104-phys-commod-large-trader-report-table4.xml" />
+    <Content Include="reporting\exposure\exp-ex110-guidebook-to-Part-20-Reports-table1-SD1.xml" />
+    <Content Include="reporting\exposure\exp-ex111-guidebook-to-Part-20-Reports-table2-SD1.xml" />
+    <Content Include="reporting\exposure\exp-ex130-phys-commod-part20-bilateral-basis-swap.xml" />
+    <Content Include="reporting\exposure\exp-ex131-phys-commod-part20-bilateral-index-swap.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex57-inc-update-1-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex58-inc-update-2-positions-acknowledged.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex59-inc-update-3-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex60-inc-update-4-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex61-inc-update-5-positions-acknowledged.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex62-inc-update-6-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex63-inc-update-7-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex64-inc-update-8-positions-acknowledged.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex65-inc-update-9-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex66-inc-update-10-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex67-inc-update-11-position1-updated.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex68-inc-update-12-positions-acknowledged.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex69-inc-update-13-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex70-inc-update-14-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex71-inc-update-15-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex72-inc-update-16-portfolio-requested.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex73-inc-update-17-positions-reported.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex74-inc-update-18-positions-requested.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex75-inc-update-19-positions-reported.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex76-snapshot-1-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex77-snapshot-2-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex78-snapshot-3-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex79-snapshot-4-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex80-snapshot-5-positions-asserted-updated.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex81-snapshot-6-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex82-snapshot-7-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex83-force-1-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex84-force-2-positions-asserted.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex85-force-3-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex86-force-4-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex87-force-6-positions-asserted-force.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex88-force-6-positions-match-results.xml" />
+    <Content Include="reporting\portfolio-reconciliation\msg-ex89-force-7-positions-match-results.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex10-position-report-fx.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex11-position-report-equity.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex12-position-report-commodity.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex13-position-report-with-payment.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex14-position-report-with-complex-payment.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex15-position-report-equity.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex2-position-report-orig-new-fields.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex2-position-report-orig-new-fields_irs_and_cds.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex20-matured-and-expired-trades.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex23-position-activity-report-netting.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex3-position-report-copper.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex4-position-report-copper-cds.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex5-position-activity-report-copper.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex6-event-activity-report-copper.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex7-position-report-multi-prod.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex8-position-report-credit.xml" />
+    <Content Include="reporting\position-and-activity-reporting\rpt-ex9-position-report-ir.xml" />
+    <Content Include="reporting\Readme.txt" />
+    <Content Include="reporting\reset-reporting\rpt-ex13-reset-report.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-1-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-10-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-11-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-2-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-3-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-4-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-5-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-6-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-7-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-8-01.xml" />
+    <Content Include="reporting\validation\invalid-testcases\invalid-col-9-01.xml" />
+    <Content Include="reporting\valuation\pr-eex100-sdr-valuations.xml" />
+    <Content Include="reporting\valuation\pr-ex01a-request-trade-val.xml" />
+    <Content Include="reporting\valuation\pr-ex01a-return-trade-val.xml" />
+    <Content Include="reporting\valuation\pr-ex01a-return-trade-val2.xml" />
+    <Content Include="reporting\valuation\pr-ex02a-request-port-val.xml" />
+    <Content Include="reporting\valuation\pr-ex02a-return-port-val.xml" />
+    <Content Include="reporting\valuation\pr-ex02b-request-port-val-and-sens.xml" />
+    <Content Include="reporting\valuation\pr-ex02b-return-port-val-and-sens.xml" />
+    <Content Include="reporting\valuation\pr-ex03a-request-sensitivity-generation.xml" />
+    <Content Include="reporting\valuation\pr-ex03a-return-sensitivities-and-description.xml" />
+    <Content Include="reporting\valuation\pr-ex03a-return-sensitivities.xml" />
+    <Content Include="reporting\valuation\pr-ex03b-request-sensitivity-generation.xml" />
+    <Content Include="reporting\valuation\pr-ex03b-return-sensitivities-with-definition.xml" />
+    <Content Include="reporting\valuation\pr-ex04-cds-sens-on-scenario-request.xml" />
+    <Content Include="reporting\valuation\pr-ex05-multiccy-val-report.xml" />
+    <Content Include="reporting\valuation\pr-ex06-option-sens-on-scenario-request.xml" />
+    <Content Include="reporting\valuation\pr-ex07-sens-on-scenario-report.xml" />
+    <Content Include="reporting\valuation\pr-ex08-sens-on-scenario-request.xml" />
+    <Content Include="reporting\valuation\pr-ex09-simple-scenario-val-report.xml" />
+    <Content Include="reporting\valuation\pr-ex10-simple-scenario-val-request.xml" />
+    <Content Include="reporting\valuation\pr-ex100-sdr-valuations.xml" />
+    <Content Include="reporting\valuation\pr-ex11-uc4C-sens-on-scenario-report.xml" />
+    <Content Include="reporting\valuation\pr-ex12-uc4C-sens-on-scenario-request.xml" />
+    <Content Include="samples\FX\FX Double Barrier.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\FX\FX Single Barrier.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\FX\FX Option European.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\IR\Swaption\Bermudan Swaption.xml" />
+    <Content Include="samples\IR\Swaption\Bermudan Swaption Cashflow.xml" />
+    <Content Include="samples\IR\Swap\Vanilla with Resets.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\IR\Swap\XCCY Basis.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\IR\Swap\IR Swap Cashflows resets.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\IR\Swap\Vanilla.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\IR\Swaption\European Swaption.xml" />
+    <Content Include="samples\FX\FX Forward.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\IR\Swap\XCCY Swap Cashflows.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,10 @@
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Config\Observables.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Config\PricingContext.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Config\Products.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Quic.Config.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Quic.Config.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\bin\Debug\Quic.FPML.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\obj\x64\Debug\Quic.Config.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\obj\x64\Debug\Quic.Config.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Config\obj\x64\Debug\Quic.Config.pdb

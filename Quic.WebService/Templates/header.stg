@@ -1,0 +1,62 @@
+﻿import "common.stg"
+import "fx.stg"
+
+bdcMap ::= [
+    "PRECEDING":"BEFORE",
+    "FOLLOWING":"AFTER",
+    "MODFOLLOWING":"MODFOLLOWING",
+    "MODPRECEDING":"MODPRECEDING",
+    default:"NA"
+]
+
+dccMap ::= [
+    "ACT/ACT.ICMA":"ACTACT",
+    "ACT/ACT.ISDA":"ACTACT",
+    "ACT/ACT.ISMA":"ACTACT",
+    "ACT/365L":"ACT365",
+    "ACT/365.FIXED":"ACT365FIXED",
+    "ACT/ACT.AFB":"ACTFEB29",
+    "ACT/360":"ACT360",
+    "BUS/252":"BUS252",
+    "30/360":"THIRTY360",
+    "30E/360":"EURO30360",
+    "30E/360.ISDA":"EURO30360",
+	default:"ACT365"
+]
+
+typeMap ::= [
+    "FxSingleLeg":"FXForward",
+    "FXOptionVanillaEuropean":"FX Opt",
+    "FXSinglePartialBarrierAnalytic":"FX S Barrier",
+    "IRGenericQMA":"IR Swap"
+]
+
+productMap ::= [
+    "FxSingleLeg":"FXForward",
+	"Swap":"IRGenericQMA"
+]
+
+header(trade,product) ::= <%
+    <trade.id>,
+    <productMap.(product)>
+%>
+
+aggregation(trade, product, ccy) ::= <%
+<!Counterparty!>       <trade.tradeHeader.partyTradeIdentifier.partyReference>,
+<!LegalDocument!>      <trade.documentation.creditSupportAgreement.identifier.Value>,
+<!StructureID!>        <trade.id>,
+<!MemberBank!>         <trade.party.partyId>,
+<!TradeType!>          <typeMap.(product)>,
+<!OriginatingParty!>   <trade.tradeHeader.partyTradeIdentifier.partyReference>,
+<!PaymentCurrency!>    <ccy>,
+<!PUACode!>            <trade.tradeHeader.tradeDate.Value>,
+<!BreakDate!>          ,
+<!AdditiveTransaction!>True,
+<!WhatIf!>             True
+%>
+
+trade(document, trade, product, ccy) ::= <%
+	<header(trade, product)>,
+    <aggregation(trade, product, ccy)>,
+	<(product)(document, trade, product, ccy)>
+%>

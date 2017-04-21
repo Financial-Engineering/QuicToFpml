@@ -1,0 +1,14 @@
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Config\Observables.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Config\PricingContext.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Config\Products.xml
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.Templates.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.Templates.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.Config.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.DateSchedule.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.DateSchedule.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.FPML.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\bin\Release\Quic.Config.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\obj\x64\Release\Quic.Templates.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\obj\x64\Release\Quic.Templates.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.Templates\obj\x64\Release\Quic.Templates.pdb

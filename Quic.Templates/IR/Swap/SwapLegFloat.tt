@@ -1,0 +1,38 @@
+﻿<#@ template language="C#"  inherits="SwapLeg" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>
+<#+
+protected override void GetMapType()
+{
+#>
+	strType, S, CouponFloat
+<#+
+}
+protected override void LegDetails()
+{
+#>
+	adtFixing, AD, <#= adtFixing #>
+	mpObservable, L, <#= mpObservable #>
+<#+
+	if (!String.IsNullOrEmpty(arPastFixing))
+	{
+#>
+	arPastFixing, AR, <#= arPastFixing #>
+<#+
+	}
+#>
+	arLeverage, AR, <#= arLeverage #>
+<#+
+	if (!String.IsNullOrEmpty(arSpread))
+	{
+#>
+	arSpread, AR, <#= arSpread #>
+<#+
+	}
+#>
+<#+
+}
+#>

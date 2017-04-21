@@ -1,0 +1,26 @@
+<DispatchResult>
+  <Variant>
+    <Map>
+      <MapEntry key="FwdRate">
+        <Variant>
+          <Double value="0.631119022328768" />
+        </Variant>
+      </MapEntry>
+      <MapEntry key="PV01Pay">
+        <Variant>
+          <Double value="-310.9218213025015" />
+        </Variant>
+      </MapEntry>
+      <MapEntry key="Price">
+        <Variant>
+          <Double value="-18466.95290659217" />
+        </Variant>
+      </MapEntry>
+      <MapEntry key="SpotRate">
+        <Variant>
+          <Double value="0.621793875330328" />
+        </Variant>
+      </MapEntry>
+    </Map>
+  </Variant>
+</DispatchResult>

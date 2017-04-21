@@ -1,0 +1,39 @@
+FxInfo(fxCCY, fxPair, baseCCY) ::= <%
+    <if(fxCCY.amount)>
+        <fxCCY.amount>,
+    <endif>
+    <fxPair.Value>.Yield.<fxPair.Value>,
+    <fxPair.Value>.Exchange.<baseCCY>
+%>
+
+FxSingleLeg(document, trade, product, baseCCY) ::= <%
+    <first(trade.product.Items)>,
+    <FxInfo(trade.product.exchangedCurrency1.paymentAmount, trade.product.exchangeRate.quotedCurrencyPair.currency1, baseCCY)>,
+    <FxInfo(trade.product.exchangedCurrency2.paymentAmount, trade.product.exchangeRate.quotedCurrencyPair.currency2, baseCCY)>,
+	<if(first(<trade.product.exchangedCurrency2.paymentDate.Items).dateAdjustments)>
+	    <trade.product.exchangedCurrency2.paymentDate.Items:{date|<bdcMap.(date.dateAdjustments.businessDayConvention)>}>,
+	<else>
+		NA,
+	<endif>
+	<if(first(<trade.product.exchangedCurrency2.paymentDate.Items).dateAdjustments.businessCenters)>
+		"<trade.product.exchangedCurrency2.paymentDate.Items:{date|<date.dateAdjustments.businessCenters.businessCenter:{x|<x.Value>}; separator=",">}>"
+	<else>
+		"NONE"
+	<endif>
+%>
+
+FxOptionEuropean(document, trade, baseCCY, buySell = "BOUGHT") ::= <%
+    <trade.product.effectiveDate.Item.adjustedDate.Value>,
+    <trade.product.Item.expiryDate>,
+    <trade.product.Item.valueDate>,
+    <buySell>,
+    0,
+    ,
+    <fxInfo(trade.product.callCurrencyAmount, trade.product.callCurrencyAmount.currency, baseCCY)>,
+    <fxInfo(trade.product.putCurrencyAmount, trade.product.putCurrencyAmount.currency, baseCCY)>,
+    <fxInfo(trade.product.cashSettlement.settlementCurrency, trade.product.cashSettlement.settlementCurrency, baseCCY)>,
+    <trade.product.callCurrencyAmount.currency.Value>.ImpliedVol.<trade.product.putCurrencyAmount.currency.Value>,
+    ,
+    <trade.product.effectiveDate.Item.dateAdjustments.businessDayConvention>,
+    "<trade.product.effectiveDate.Item.dateAdjustments.businessCenters.businessCenter:{x|<x.Value>}; separator=",">"
+%>

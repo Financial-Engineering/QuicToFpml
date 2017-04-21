@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:tns="Quic.Dispatch.WebService" elementFormDefault="qualified"
+           targetNamespace="Quic.Dispatch.WebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Submit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strModulePaths" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strModuleName" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strModuleVersion" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFunctionXml" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SubmitResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strModulePaths" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strModuleName" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strModuleVersion" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFunctionXml" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="priority" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SubmitExResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="jobId" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetStatusResult" type="tns:JobStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobStatus">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="funcStatus" type="tns:FunctionStatus" />
+      <xs:element minOccurs="1" maxOccurs="1" name="progress" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="1" name="progressMsg" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FunctionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Queued" />
+      <xs:enumeration value="Running" />
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Failed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="jobId" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetResultsResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="jobId" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetErrorResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="jobId" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelResponse">
+    <xs:complexType />
+  </xs:element>
+</xs:schema>

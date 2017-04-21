@@ -1,0 +1,5 @@
+D:\QuIC\etl\code\Quic.WebService\Quic.FPML\bin\Release\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.FPML\bin\Release\Quic.FPML.pdb
+D:\QuIC\etl\code\Quic.WebService\Quic.FPML\obj\x64\Release\Quic.FPML.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\Quic.FPML\obj\x64\Release\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\Quic.FPML\obj\x64\Release\Quic.FPML.pdb

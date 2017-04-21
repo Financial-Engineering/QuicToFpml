@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://schemas.servicestack.net/types">
+   <soap:Header/>
+   <soap:Body>
+<CsvRequest xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Quic.WebService">
+  <Measures>CVA</Measures>
+  <SchedulesCsv/>
+  <TransactionCsv>XFF4509761079KAPI,FXForward,1887 COMPANY-PRH,1887 COMPANY-PRH-NoDoc,,CBK,FXForward,CLYGLA 4509 GFCD,GBP,FXFFE,,TRUE,FALSE,2014/04/04,804437.890,USD.Yield.USD,USD.Exchange.USD,519461.380,GBP_ccy.Yield.GBP,GBP.Exchange.USD,NA,"USD,GBP"
+</TransactionCsv>
+  <ValueDate>2013-11-07T00:00:00</ValueDate>
+</CsvRequest>
+   </soap:Body>
+</soap:Envelope>

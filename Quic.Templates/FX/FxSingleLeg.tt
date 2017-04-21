@@ -1,0 +1,14 @@
+﻿<#@ template language="C#" inherits="Quic.Templates.Trade" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>,<#= dtDelivery 
+#>,<#= rReceiveAmount 
+#>,<#= pYieldInfoReceive 
+#>,<#= pFXInfoReceive 
+#>,<#= rPayAmount 
+#>,<#= pYieldInfoPay 
+#>,<#= pFXInfoPay 
+#>,<#= strBusDayConv 
+#>,"<#= strCurrency1 #>,<#= strCurrency2 #>,USD" 

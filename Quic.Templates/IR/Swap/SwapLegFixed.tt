@@ -1,0 +1,22 @@
+﻿<#@ template language="C#" inherits="SwapLeg" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="Quic.FPML" #>
+<# 
+  // Run the base template:
+  base.TransformText();
+#>
+<#+
+protected override void GetMapType()
+{
+#>
+	strType, S, CouponFixed
+<#+
+}
+protected override void LegDetails()
+{
+#>
+	arFixedRate, AR, <#= arFixedRate 
+#>
+<#+
+}
+#>

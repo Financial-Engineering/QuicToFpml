@@ -1,0 +1,11 @@
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\WebServiceUnitTests.dll
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\WebServiceUnitTests.pdb
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\Quic.DateSchedule.dll
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\Quic.Config.dll
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\Quic.FPML.dll
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\Quic.DateSchedule.pdb
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\Quic.Config.pdb
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\bin\Debug\Quic.FPML.pdb
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\obj\x64\Debug\WebServiceUnitTests.csprojResolveAssemblyReference.cache
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\obj\x64\Debug\WebServiceUnitTests.dll
+D:\QuIC\etl\code\Quic.WebService\WebServiceUnitTests\obj\x64\Debug\WebServiceUnitTests.pdb
